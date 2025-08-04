@@ -1,0 +1,23 @@
+#config_version=6
+
+playfields:
+  playfield:
+    default_source_device: bd_plunger
+    tags: default
+    enable_ball_search: settings.ball_search_enabled
+
+ball_devices:
+  bd_trough:
+    ball_switches: s_trough_ball_1, s_trough_ball_2, s_trough_ball_3
+    tags: trough, home, drain
+    eject_coil: c_trough_eject
+    eject_coil_jam_pulse: 15ms
+    eject_targets: bd_plunger
+    eject_timeouts: 2s
+    debug: true
+
+  bd_plunger:
+    ball_switches: s_plunger
+    eject_timeouts: 2500ms
+    eject_coil: c_auto_plunger
+    auto_fire_on_unexpected_ball: true

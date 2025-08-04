@@ -1,0 +1,48 @@
+#config_version=6
+
+light_settings:
+  default_fade_ms: 100
+
+settings:
+  trough_eject_coil_power:
+    sort: 200
+    label: Trough ball eject power
+    key_type: int
+    default: 20
+    values:
+      18: '18 ms'
+      20: '20 ms (default)'
+      24: '24 ms'
+
+  auto_plunger_coil_power:
+    sort: 201
+    label: Auto launch power
+    key_type: int
+    default: 18
+    values:
+      15: '15 ms'
+      18: '18 ms (default)'
+      21: '21 ms'
+
+  flipper_main_coil_power:
+    sort: 202
+    label: Flipper main power
+    key_type: int
+    default: 24
+    values:
+      20: '20 ms'
+      24: '24 ms (default)'
+      28: '28 ms'
+
+  # ball_search_enabled: #Actually found in ball_search.yaml
+  #   sort: 999
+
+  attract_carousel_timer_tick:
+    label: Attract Carousel Rotation Time
+    values:
+      3.0: "3 seconds"
+      5.0: "5 seconds (default)"
+      7.0: "7 seconds"
+    default: 5.0
+    key_type: float
+    sort: 301

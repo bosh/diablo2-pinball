@@ -1,0 +1,51 @@
+#config_version=6
+
+config:
+  - attract-media.yaml
+
+mode_settings:
+  selectable_items:
+    - last_game_score
+    - title
+    - byline
+    - logos
+    - high_scores
+  next_item_events: advance_attract_carousel
+  previous_item_events: reverse_attract_carousel
+
+timers:
+  attract_carousel_timer:
+    end_value: 1
+    tick_interval: settings.attract_carousel_timer_tick
+    start_running: true
+    control_events:
+      - event: item_highlighted
+        action: restart
+
+event_player:
+  timer_attract_carousel_timer_complete: [advance_attract_carousel]
+
+  mode_attract_started:
+    - main_show_reloop
+
+show_player:
+  main_show_reloop:
+    light_test_loop:
+      key: main_attract_show
+      loops: 1
+      events_when_completed: start_group2_color_dance
+  start_group2_color_dance:
+    group2_color_dance:
+      key: main_attract_show
+      loops: 2
+      events_when_completed: start_group3_color_dance
+  start_group3_color_dance:
+    group3_color_dance:
+      key: main_attract_show
+      loops: 1
+      events_when_completed: start_group4_color_dance
+  start_group4_color_dance:
+    group4_color_dance:
+      key: main_attract_show
+      loops: 0
+      events_when_completed: main_show_reloop

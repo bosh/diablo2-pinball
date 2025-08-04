@@ -1,0 +1,22 @@
+#config_version=6
+
+lights:
+  gi_1_1:
+    tags: lights_2a, lights_3a, lights_4a, lights_gi
+  gi_1_2:
+    tags: lights_2b, lights_3b, lights_4b, lights_gi
+  gi_1_3:
+    tags: lights_2a, lights_3c, lights_4c, lights_gi
+  gi_1_4:
+    tags: lights_2a, lights_3b, lights_4d, lights_gi
+
+  l_start:
+    number:
+    tags: lights_2a, lights_3a, lights_4a
+
+  vlight_game_over:
+    platform: virtual
+
+info_lights:
+  game_over:
+    light: vlight_game_over

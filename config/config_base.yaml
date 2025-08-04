@@ -1,0 +1,22 @@
+#config_version=6
+
+mpf:
+  report_crashes: never
+
+config:
+  - ball_devices.yaml
+  - ball_search.yaml
+  - bcp.yaml
+  - coils.yaml
+  - fast.yaml
+  - hardware.yaml
+  - machine.yaml
+  - modes.yaml
+  - player_vars.yaml
+  - settings.yaml
+  - shot_profiles.yaml
+  - lights/config.yaml
+  - switches/config.yaml
+
+custom_code:
+  - pydiablo.core.Core

@@ -1,0 +1,8 @@
+#config_version=6
+
+hardware:
+  platform: virtual #, fast
+
+psus:
+  12v:
+    voltage: 12

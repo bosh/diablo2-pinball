@@ -1,0 +1,9 @@
+#show_version=6
+
+- duration: 200ms
+  coils:
+    c_trough_eject: pulse
+
+- duration: 200ms
+  coils:
+    c_auto_plunger: pulse

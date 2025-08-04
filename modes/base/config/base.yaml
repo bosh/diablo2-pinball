@@ -1,0 +1,34 @@
+#config_version=6
+
+mode:
+  start_events: ball_started
+  stop_events: ball_ending
+  priority: 1000
+
+config:
+  - light_player.yaml
+  - virtual_hooks.yaml
+
+slide_player:
+  mode_base_started:
+    base:
+      action: play
+    attract:
+      action: remove
+
+event_player:
+  mode_base_started:
+    - mode_start_code_base
+
+variable_player:
+  update_player_ball_start:
+    ball_start_time:
+      float: timestamp
+      action: set
+    ball_end_time:
+      float: -1
+      action: set
+  update_player_ball_end:
+    ball_end_time:
+      float: timestamp
+      action: set

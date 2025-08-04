@@ -1,0 +1,93 @@
+[gd_scene load_steps=6 format=3 uid="uid://bamkxj4nbh6at"]
+
+[ext_resource type="Script" uid="uid://6mdcui7wkc47" path="res://addons/mpf-gmc/classes/mpf_slide.gd" id="1_m2s46"]
+[ext_resource type="Script" uid="uid://bnssoxshet8be" path="res://addons/mpf-gmc/classes/mpf_carousel.gd" id="2_hhxni"]
+[ext_resource type="Texture2D" uid="uid://c72w7ugrere1y" path="res://images/FAST logo.png" id="3_f161n"]
+[ext_resource type="Texture2D" uid="uid://dounln3l35d26" path="res://addons/mpf-gmc/images/logo_mpf.png" id="4_cq3lo"]
+[ext_resource type="Texture2D" uid="uid://bvwosca2u35bl" path="res://images/BlizzardLogo.png" id="5_cq3lo"]
+
+[node name="Attract" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_m2s46")
+metadata/_custom_type_script = "uid://6mdcui7wkc47"
+
+[node name="background" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 2400.0
+offset_bottom = 800.0
+color = Color(0.2484, 0.2484, 0.2484, 1)
+
+[node name="MPFCarousel" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_hhxni")
+carousel_name = "attract"
+metadata/_custom_type_script = "uid://bnssoxshet8be"
+
+[node name="title" type="Node2D" parent="MPFCarousel"]
+
+[node name="diablo" type="Label" parent="MPFCarousel/title"]
+offset_left = 82.0
+offset_top = 105.0
+offset_right = 2328.0
+offset_bottom = 514.0
+theme_override_font_sizes/font_size = 300
+text = "Diablo 2 Pinball"
+
+[node name="byline" type="Node2D" parent="MPFCarousel"]
+
+[node name="alex" type="Label" parent="MPFCarousel/byline"]
+offset_left = 14.0
+offset_top = 655.0
+offset_right = 1415.0
+offset_bottom = 1076.0
+theme_override_font_sizes/font_size = 100
+text = "by Alex Lobascio"
+
+[node name="logos" type="Node2D" parent="MPFCarousel"]
+visible = false
+
+[node name="blackout" type="ColorRect" parent="MPFCarousel/logos"]
+offset_right = 2400.0
+offset_bottom = 800.0
+color = Color(0, 0, 0, 1)
+
+[node name="FastLogo" type="Sprite2D" parent="MPFCarousel/logos"]
+position = Vector2(1968, 415)
+scale = Vector2(0.370935, 0.370935)
+texture = ExtResource("3_f161n")
+
+[node name="LogoMpf" type="Sprite2D" parent="MPFCarousel/logos"]
+position = Vector2(451, 398)
+scale = Vector2(2.11875, 2.11875)
+texture = ExtResource("4_cq3lo")
+
+[node name="BlizzardLogo" type="Sprite2D" parent="MPFCarousel/logos"]
+position = Vector2(1155, 413)
+scale = Vector2(0.940426, 0.940426)
+texture = ExtResource("5_cq3lo")
+
+[node name="last_game_score" type="Node2D" parent="MPFCarousel"]
+visible = false
+
+[node name="last game" type="Label" parent="MPFCarousel/last_game_score"]
+offset_left = 16.0
+offset_top = -4.0
+offset_right = 1372.0
+offset_bottom = 297.0
+theme_override_font_sizes/font_size = 100
+text = "Last Game:"
+
+[node name="high_scores" type="Node2D" parent="MPFCarousel"]
+visible = false
+
+[node name="high scores" type="Label" parent="MPFCarousel/high_scores"]
+offset_left = 1708.0
+offset_top = 623.0
+offset_right = 2358.0
+offset_bottom = 760.0
+theme_override_font_sizes/font_size = 100
+text = "High Scores"
+horizontal_alignment = 2

@@ -1,0 +1,28 @@
+#config_version=6
+
+switches:
+  s_start:
+    number:
+    tags: start
+  s_plunger:
+    number:
+  s_trough_ball_1: #optos NC
+    number:
+    type: 'NC'
+  s_trough_ball_2:
+    number:
+  s_trough_ball_3:
+    number:
+
+  vswitch_test_coils:
+    platform: virtual
+    number: 999
+
+show_player:
+  vswitch_test_coils_active:
+    coil_cycle_test:
+      loops: 1
+
+virtual_platform_start_active_switches:
+  - s_trough_ball_1
+  - s_trough_ball_2

@@ -1,0 +1,16 @@
+#config_version=6
+
+slide_player:
+  mode_attract_started.1:
+    attract:
+      action: play
+  mode_attract_started.0:
+    startup:
+      action: remove
+
+event_player:
+  # Play pool music on start or when a track finishes
+  mode_attract_started:
+    - dj_attract_music_pool
+  music_track_finished:
+    - dj_attract_music_pool|1000ms

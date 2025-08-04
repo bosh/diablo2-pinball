@@ -1,0 +1,25 @@
+#show_version=6
+
+- duration: 500ms #Start off
+  lights:
+    "*": off
+
+- duration: 220ms #Ascend 3,7,10, off
+  lights:
+    "*": '333333'
+
+- duration: 220ms
+  lights:
+    "*": '777777'
+
+- duration: 220ms
+  lights:
+    "*": 'aaaaaa'
+
+- duration: 300ms
+  lights:
+    "*": on #show the default colors
+
+- duration: 100ms
+  lights:
+    "*": off

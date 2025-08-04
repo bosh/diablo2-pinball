@@ -1,0 +1,8 @@
+logs/
+data/
+
+__pycache__/
+
+# Godot 4+ specific ignores
+.godot/
+

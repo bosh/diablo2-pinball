@@ -1,0 +1,23 @@
+#config_version=6
+
+event_player:
+  service_button{button=='PAGE_LEFT'}: [dj_decrement]
+  service_button{button=='PAGE_RIGHT'}: [dj_increment]
+  service_button{button=='UP'}: [dj_increment]
+  service_button{button=='DOWN'}: [dj_decrement]
+  service_button{button=='TOGGLE'}: [dj_cancel]
+  service_button{button=='ENTER'}: [dj_click_good]
+  service_button{button=='ESC'}: [dj_click_bad]
+  service_button{button=='START'}: [dj_cant_incdec_more]
+  service_button{button=='TRIGGER'}: [dj_cant_incdec_more]
+
+  service_mode_entered: [dj_status_menu]
+  service_mode_exited: [dj_bootup]
+
+# Defer to ensure playing after volume change
+  master_volume_increase: [dj_increment|1ms]
+  master_volume_decrease: [dj_decrement|1ms]
+
+# Audio warning on coin door open/close
+  s_coin_door_active: [dj_high_voltage_enabled]
+  s_coin_door_inactive: [dj_high_voltage_disabled]

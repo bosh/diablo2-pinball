@@ -1,0 +1,8 @@
+#config_version=6
+
+machine:
+  balls_installed: 3
+
+game: # 1 ball 1 player due to alternative rules
+  balls_per_game: 1
+  max_players: 1

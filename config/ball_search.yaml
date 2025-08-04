@@ -1,0 +1,17 @@
+#config_version=6
+
+settings:
+  ball_search_enabled:
+    sort: 200
+    label: Ball Search Enabled
+    values:
+      0: "Disabled"
+      1: "Enabled"
+    default: 0
+    key_type: int
+
+widget_player:
+  ball_search_started: ball_search_overlay
+  ball_search_stopped:
+    ball_search_overlay:
+      action: remove

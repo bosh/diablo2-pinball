@@ -1,0 +1,10 @@
+#config_version=6
+
+coils:
+  c_auto_plunger:
+    number:
+    default_pulse_ms: settings.auto_plunger_coil_power
+
+  c_trough_eject:
+    number:
+    default_pulse_ms: settings.trough_eject_coil_power

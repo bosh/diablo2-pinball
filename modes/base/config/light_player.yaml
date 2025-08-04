@@ -1,0 +1,20 @@
+#config_version=6
+
+event_player:
+  mode_base_started:
+    - start_gi_base
+
+show_player:
+  start_gi_base:
+    led_color:
+      priority: -10
+      show_tokens:
+        lights: lights_gi
+        color: aaaaaa
+
+light_player:
+  #Start button lights by default and turns off when pressed
+  "{device.switches.s_start.state == 0}":
+    l_start: on
+  "{device.switches.s_start.state == 1}":
+    l_start: off

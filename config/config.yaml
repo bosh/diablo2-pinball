@@ -1,0 +1,6 @@
+#config_version=6
+
+# Note: This file is used by `mpf game` when no -c option is given.
+
+config:
+  - config_base.yaml
