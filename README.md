@@ -1,5 +1,7 @@
 # Diablo 2 Pinball
 
+![Backbox art](https://github.com/bosh/diablo2-pinball/blob/master/monitor/backbox.jpg)
+
 Enter the Chaos Sanctuary and defeat the Lord of Terror!
 
 ------
